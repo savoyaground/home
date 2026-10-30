@@ -1,0 +1,49 @@
+<!-- ==================================================
+     HOME · HEAD   (source: savoyaground/home/webflow/home-head.html)
+     Replace <COMMIT> with the full commit hash after each push.
+================================================== -->
+
+<!-- Hero headline + button: CSS-only fade so they show before any file loads (LCP) -->
+<style>
+.home-hero-section.home-hero-section .fade-in{opacity:1;transform:none;animation:svHeroIn .6s ease-out both}
+@keyframes svHeroIn{from{opacity:.01;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.home-hero-section.home-hero-section .fade-in{animation:none}}
+</style>
+
+<!-- Hero video: runs here (not in home.js) so it acts before the video starts downloading.
+     Phones/tablets (≤991px): remove the video entirely.
+     Desktop: play the 2.9 MB HubSpot-hosted file instead of Webflow's 6 MB re-encode. -->
+<script>
+(function () {
+  var SMALL = window.matchMedia('(max-width: 991px)').matches;
+  var DESKTOP_SRC = 'https://www2.savoya.com/hubfs/Website/Heros/savoya-hero-1280-web.mp4';
+  function apply() {
+    var video = document.querySelector('.bg-video-desktop video');
+    if (!video) return false;
+    video.querySelectorAll('source').forEach(function (s) { s.removeAttribute('src'); s.remove(); });
+    if (SMALL) {
+      try { video.pause(); } catch (e) {}
+      video.removeAttribute('autoplay');
+      video.removeAttribute('src');
+      video.closest('.bg-video-desktop').style.display = 'none';
+    } else {
+      var s = document.createElement('source');
+      s.src = DESKTOP_SRC; s.type = 'video/mp4';
+      video.appendChild(s);
+    }
+    try { video.load(); } catch (e) {}
+    return true;
+  }
+  if (apply()) return;
+  var obs = new MutationObserver(function () { if (apply()) obs.disconnect(); });
+  obs.observe(document.documentElement, { childList: true, subtree: true });
+  document.addEventListener('DOMContentLoaded', function () { obs.disconnect(); });
+})();
+</script>
+
+<!-- Home styles -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/savoyaground/home@<COMMIT>/home.css">
+
+<!-- Slider base styles: sliders are far below the first screen, so don't hold up first paint -->
+<link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide-core.min.css" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide-core.min.css"></noscript>

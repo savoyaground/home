@@ -1,0 +1,67 @@
+/* ==========================================================================
+   Savoya Home page styles  (savoyaground/home → home.css)
+   Loaded in the Home page <head>. Page-only; site-wide styles live in core.
+   Two small rules stay inline in the Webflow head on purpose (hero fade),
+   because they must apply before this file arrives. See README.
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   1. Hero background video
+   The Webflow background video sits behind the hero copy. Phones and tablets
+   get no video at all (the inline head script removes it before it loads).
+   -------------------------------------------------------------------------- */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-video-desktop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 476px) {
+  .bg-video-desktop { display: none !important; }
+}
+
+
+/* --------------------------------------------------------------------------
+   2. Sliders (Splide) and scroll rows
+   -------------------------------------------------------------------------- */
+.splide__track {
+  overflow: hidden;
+}
+
+/* Horizontal scroll rows without a visible scrollbar (sticky section links, tab menu) */
+.no-scrollbar {
+  -ms-overflow-style: none;   /* old Edge */
+  scrollbar-width: none;      /* Firefox */
+  overflow-x: scroll;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;              /* Chrome, Safari */
+}
+
+
+/* --------------------------------------------------------------------------
+   3. Lists: stop iOS from enlarging list text on rotate
+   -------------------------------------------------------------------------- */
+ol,
+ul {
+  -webkit-text-size-adjust: 100%;
+}
+
+
+/* --------------------------------------------------------------------------
+   4. HubSpot reCAPTCHA badge
+   HubSpot forms leave an orphaned badge on the page; the disclosure text
+   stays inside the form, so the floating badge is hidden.
+   -------------------------------------------------------------------------- */
+body > div:has(> .grecaptcha-badge) {
+  display: none;
+}

@@ -1,0 +1,70 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Savoya?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Savoya is a premium black car and executive ground transportation platform trusted by 61% of Fortune 100 companies. We pair rigorously vetted chauffeurs with purpose-built technology, including real-time GPS tracking, automated flight monitoring, and 24/7 live Client Care, so the people who manage executive and black car travel, like Executive Assistants, Flight Teams, Security Teams, Meetings and Events Organizers and Recruiting Coordinators to name a few, can book with confidence and move on to everything else."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is Savoya different from other executive and black car services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Savoya operates in a category of its own. While other services function as marketplaces or aggregators, Savoya is a fully managed platform. Every chauffeur is individually vetted through a 14-point screening process, signs a confidentiality agreement, and meets an ongoing performance standard. Savoya accepts 2% of chauffeur applicants. Clients also receive a dedicated account manager, automated flight tracking, customizable notifications, real-time vehicle visibility, and 24/7 live Client Care. Not a call center, a real, live team that knows your account, picks up when you call, and is empowered to act."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Savoya work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Booking can be done through the Savoya portal or app in a few clicks, with your traveler's preferences saved for recurring trips. We match and assign the best drivers to your trip, even in short-notice requests, and inform you every step of the way. Savoya monitors your flight in real time, automatically adjusting your driver for delays or early arrivals. Your dedicated account manager and 24/7 Client Care team handle any changes, and you receive notifications at every stage with the ability to track the vehicle live. After each trip, receipts are automated and preferred drivers can be saved for next time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does Savoya operate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Savoya operates in 300+ markets worldwide, covering major cities and corporate travel hubs across North America, Europe, Asia, the Middle East, Africa and beyond. The same vetting standards, service protocols, and real-time visibility apply in every market. Whether you're booking in Dallas or Dubai, the standard travels with you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does Savoya cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Savoya's pricing reflects the premium standard of service, vetted chauffeurs, dedicated account management, real-time technology, and 24/7 live Client Care. Rates vary by market, vehicle type, and program structure. For enterprise accounts and high-volume programs, Savoya offers dedicated account support and program-level pricing. Contact our team to discuss the right structure for your organization."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of vehicles does Savoya offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Savoya drivers operate luxury vehicles, executive sedans, SUVs, Sprinter vans, and larger group vehicles including mini and coach buses. Every vehicle used by a Savoya driver meets rigorous standards for presentation, cleanliness, and condition. Your vehicle and chauffeur preferences are saved to your account so future bookings take seconds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Savoya vet its chauffeurs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every chauffeur on the Savoya platform passes a rigorous 14-point vetting process, including comprehensive background checks, drug screening, and a signed confidentiality agreement. Savoya accepts 2% of chauffeur applicants. Chauffeurs are subject to ongoing performance monitoring and removed from the platform for failing to maintain Savoya's standard."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Savoya require a contract or minimum commitment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No long-term contracts are required to get started. You can begin booking individual trips or contact our team to set up a corporate account, whichever fits your needs. Enterprise programs and high-volume accounts benefit from dedicated account support and program-level structure, but there is no minimum commitment required to experience the Savoya standard."
+      }
+    }
+  ]
+}
